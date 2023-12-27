@@ -1,3 +1,10 @@
-const fs = require('fs');
-fs.writeFileSync('new.txt','Hello This is new Text in this file');
-fs.writeFileSync('hello.html','Hello This is new Text in this file');
+const http = require('http');
+const colors = require('colors');
+
+const app = http.createServer((req, res) => {
+res.write('hello world');
+console.log('hello world'.red);
+res.end();
+});
+
+app.listen(3900);
