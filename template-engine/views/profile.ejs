@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-       <title>Profile</title>
-</head>
-
-<h1>This is Profile Page</h1>
-<h2>Hello => <%= user.name %></h2>
-<h2>Email: <%= user.email %></h2>
-<h2>Contact: <%= user.contact %></h2>
-<body>
-    
-</body>
+  <head>
+    <title>Profile</title>
+  </head>
+  <%- include('sections/header') %>
+  <h1>This is Profile Page</h1>
+  <h2>Hello => <%= user.name %></h2>
+  <h2>Email: <%= user.email %></h2>
+  <h2>Contact: <%= user.contact %></h2>
+  <ul>
+    <% user.skills.forEach((skill) => { %>
+    <li><%= skill %></li>
+    <% }); %>
+  </ul>
+  <body></body>
 </html>
