@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+
 const filter = (req, res, next) => {
+  console.log(req.query);
   if (!req.query.age) {
     res.send("Age must be Entered");
   } else if (req.query.age < 20) {
